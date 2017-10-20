@@ -8,5 +8,19 @@
     <artifactId>assessment</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    
+    <properties>
+        <!-- avoid weird encoding -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <!-- GWT properties -->
+        <gwt-version>2.8.2</gwt-version>
+        <gwt-maven-version>2.8.0</gwt-maven-version>
+
+        <!--logging -->
+        <log4j-version>2.9.1</log4j-version>
+
+        <!-- MySQL -->
+        <mysql-connector-version>5.1.44</mysql-connector-version>
+    </properties>
 </project>
