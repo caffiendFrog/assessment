@@ -28,4 +28,16 @@ public class MySqlConnectionProviderTest {
             fail();
         }
     }
+
+    @Test
+    public void testCreateTable() {
+        MySqlConnectionProvider connectionProvider = MySqlConnectionProvider.getInstance();
+        try {
+            connectionProvider.connectToDb();
+            connectionProvider.connectToTable();
+        } catch (Exception e) {
+            logger.debug(e.getMessage());
+            fail();
+        }
+    }
 }
