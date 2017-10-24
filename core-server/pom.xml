@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>catalyst-core-server</artifactId>
     <name>Catalyst Core Server</name>
-    <description>Core server-side logic</description>
+    <description>Core Server logic</description>
 
     <parent>
         <groupId>org.catalyst</groupId>
@@ -14,7 +14,8 @@
     </parent>
 
     <modules>
-        <module></module>
+        <module>authentication</module>
+        <module>database</module>
     </modules>
 
 </project>
