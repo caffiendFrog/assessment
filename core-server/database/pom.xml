@@ -3,18 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>catalyst-core-server</artifactId>
-    <name>Catalyst Core Server</name>
-    <description>Core server-side logic</description>
+    <artifactId>catalyst-database</artifactId>
+    <name>Catalyst Database</name>
+    <description>Database related code</description>
 
     <parent>
         <groupId>org.catalyst</groupId>
-        <artifactId>catalyst-base</artifactId>
+        <artifactId>catalyst-core-server</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
-    <modules>
-        <module></module>
-    </modules>
-
 </project>

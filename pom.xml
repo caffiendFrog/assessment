@@ -107,8 +107,8 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <modules>
-                <module>common</module>
-                <module>webapp</module>
+                <module>core-server</module>
+                <module>webapps</module>
             </modules>
 
         </profile>
