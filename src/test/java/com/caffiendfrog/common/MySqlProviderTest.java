@@ -1,4 +1,4 @@
-package com.caffiendfrog.services;
+package com.caffiendfrog.common;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -9,8 +9,8 @@ import static org.junit.Assert.fail;
 /**
  * Created by sophia on 10/23/17.
  */
-public class MySqlConnectionProviderTest {
-    private final static Logger logger = LogManager.getLogger(MySqlConnectionProviderTest.class);
+public class MySqlProviderTest {
+    private final static Logger logger = LogManager.getLogger(MySqlProviderTest.class);
 
 
     //TODO Add test that drops the database and test create
@@ -20,7 +20,7 @@ public class MySqlConnectionProviderTest {
      */
     @Test
     public void testConnectToDatabase() {
-        MySqlConnectionProvider connectionProvider = MySqlConnectionProvider.getInstance();
+        MySqlProvider connectionProvider = MySqlProvider.getInstance();
         try {
             connectionProvider.connectToDb();
         } catch (Exception e) {
@@ -31,7 +31,7 @@ public class MySqlConnectionProviderTest {
 
     @Test
     public void testCreateTable() {
-        MySqlConnectionProvider connectionProvider = MySqlConnectionProvider.getInstance();
+        MySqlProvider connectionProvider = MySqlProvider.getInstance();
         try {
             connectionProvider.connectToDb();
             connectionProvider.connectToTable();

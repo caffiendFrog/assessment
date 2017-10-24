@@ -1,0 +1,8 @@
+<module rename-to="acc">
+    <!-- Inherit the core Web Toolkit stuff.                  -->
+    <inherits name='com.google.gwt.user.User'/>
+
+    <!-- Specify the app entry point class.                   -->
+    <entry-point class='com.caffiendfrog.acc.client.MyApplication'/>
+
+</module>

@@ -1,4 +1,4 @@
-package com.caffiendfrog.services;
+package com.caffiendfrog.common;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -11,9 +11,9 @@ import java.sql.SQLException;
 /**
  * Created by sophia on 10/23/17.
  */
-public class MySqlConnectionProvider {
-    private static final MySqlConnectionProvider INSTANCE = new MySqlConnectionProvider();
-    private static final Log logger = LogFactory.getLog(MySqlConnectionProvider.class);
+public class MySqlProvider {
+    private static final MySqlProvider INSTANCE = new MySqlProvider();
+    private static final Log logger = LogFactory.getLog(MySqlProvider.class);
 
     // connection information
     private static final String jdbc = "jdbc:mysql://";
@@ -28,9 +28,11 @@ public class MySqlConnectionProvider {
     private static final String createSql = "CREATE DATABASE IF NOT EXISTS " + dbName;
 
     private boolean createDb = false;
-    private Connection connection;
+    private static Connection connection;
 
-    public static MySqlConnectionProvider getInstance() { return INSTANCE; }
+    public static MySqlProvider getInstance() { return INSTANCE; }
+
+    public static Connection getConnection() { return connection;  }
 
     protected void connectToDb() throws SQLException {
         connection =  DriverManager.getConnection(jdbcUrl, dbUser, dbPassword);
